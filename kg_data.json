@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "id": "AIVA",
+      "type": "System"
+    },
+    {
+      "id": "Microservice Deployment",
+      "type": "Architecture"
+    },
+    {
+      "id": "Docker",
+      "type": "Tool"
+    },
+    {
+      "id": "Kubernetes",
+      "type": "Tool"
+    },
+    {
+      "id": "FastAPI",
+      "type": "Framework"
+    },
+    {
+      "id": "RESTful Endpoints",
+      "type": "Protocol"
+    },
+    {
+      "id": "ChromaDB",
+      "type": "Database"
+    },
+    {
+      "id": "Vector Database",
+      "type": "Component Type"
+    },
+    {
+      "id": "Google Gemini",
+      "type": "AI Model"
+    },
+    {
+      "id": "Text Embeddings",
+      "type": "Technique"
+    },
+    {
+      "id": "Dense Semantic Search",
+      "type": "Concept"
+    },
+    {
+      "id": "Okapi BM25",
+      "type": "Algorithm"
+    },
+    {
+      "id": "Exact Technical Term Retrieval",
+      "type": "Concept"
+    },
+    {
+      "id": "Reciprocal Rank Fusion",
+      "type": "Algorithm"
+    },
+    {
+      "id": "Redis",
+      "type": "Database"
+    },
+    {
+      "id": "In-memory Caching",
+      "type": "Concept"
+    },
+    {
+      "id": "Hybrid RAG",
+      "type": "Architecture"
+    },
+    {
+      "id": "Document Ingestion",
+      "type": "Process"
+    },
+    {
+      "id": "Semantic Similarity",
+      "type": "Concept"
+    },
+    {
+      "id": "Lexical Keyword Matching",
+      "type": "Concept"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "AIVA",
+      "target": "Microservice Deployment",
+      "type": "USES"
+    },
+    {
+      "source": "Microservice Deployment",
+      "target": "Docker",
+      "type": "LEVERAGES"
+    },
+    {
+      "source": "Microservice Deployment",
+      "target": "Kubernetes",
+      "type": "LEVERAGES"
+    },
+    {
+      "source": "AIVA",
+      "target": "FastAPI",
+      "type": "USES"
+    },
+    {
+      "source": "FastAPI",
+      "target": "RESTful Endpoints",
+      "type": "COMMUNICATES_VIA"
+    },
+    {
+      "source": "AIVA",
+      "target": "ChromaDB",
+      "type": "USES"
+    },
+    {
+      "source": "ChromaDB",
+      "target": "Vector Database",
+      "type": "IS_A"
+    },
+    {
+      "source": "ChromaDB",
+      "target": "Google Gemini",
+      "type": "PAIRED_WITH"
+    },
+    {
+      "source": "Google Gemini",
+      "target": "Text Embeddings",
+      "type": "GENERATES"
+    },
+    {
+      "source": "Text Embeddings",
+      "target": "Dense Semantic Search",
+      "type": "ENABLES"
+    },
+    {
+      "source": "AIVA",
+      "target": "Okapi BM25",
+      "type": "USES"
+    },
+    {
+      "source": "Okapi BM25",
+      "target": "Exact Technical Term Retrieval",
+      "type": "PERFORMS"
+    },
+    {
+      "source": "Exact Technical Term Retrieval",
+      "target": "Lexical Keyword Matching",
+      "type": "IS_A"
+    },
+    {
+      "source": "AIVA",
+      "target": "Reciprocal Rank Fusion",
+      "type": "USES"
+    },
+    {
+      "source": "Reciprocal Rank Fusion",
+      "target": "Dense Semantic Search",
+      "type": "BALANCES"
+    },
+    {
+      "source": "Reciprocal Rank Fusion",
+      "target": "Lexical Keyword Matching",
+      "type": "BALANCES"
+    },
+    {
+      "source": "AIVA",
+      "target": "Redis",
+      "type": "USES"
+    },
+    {
+      "source": "Redis",
+      "target": "In-memory Caching",
+      "type": "PROVIDES"
+    },
+    {
+      "source": "AIVA",
+      "target": "Hybrid RAG",
+      "type": "IMPLEMENTS"
+    },
+    {
+      "source": "Hybrid RAG",
+      "target": "Dense Semantic Search",
+      "type": "COMBINES"
+    },
+    {
+      "source": "Hybrid RAG",
+      "target": "Exact Technical Term Retrieval",
+      "type": "COMBINES"
+    },
+    {
+      "source": "Document Ingestion",
+      "target": "AIVA",
+      "type": "IS_PART_OF"
+    },
+    {
+      "source": "Dense Semantic Search",
+      "target": "Semantic Similarity",
+      "type": "IS_A"
+    }
+  ]
+}

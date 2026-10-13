@@ -127,6 +127,9 @@ class RAGEngine:
         
         return len(chunks)
 
+    def retrieve(self, query_text: str, top_k: int = 3) -> list:
+        return self.query(query_text=query_text, n_results=top_k)
+
     def query(self, query_text: str, n_results: int = 3) -> list:
         # 1. Dense search using ChromaDB
         query_embedding = self.embeddings.embed_query(query_text)

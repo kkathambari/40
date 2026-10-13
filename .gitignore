@@ -21,3 +21,8 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Chroma Vector DB
+chroma_db/
+kg_test_visualization.html
+kg_demo.html
